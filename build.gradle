@@ -12,7 +12,7 @@ apply plugin: 'org.springframework.boot'
 
 jar {
     baseName = 'gs-rest-service'
-    version =  '0.3.0'
+    version =  '0.4.0'
 }
 
 repositories {
@@ -24,8 +24,14 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+
     compile("org.springframework.boot:spring-boot-starter-data-rest")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-devtools")
+
     compile("com.h2database:h2")
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
